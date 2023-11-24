@@ -1,0 +1,135 @@
+<div class="purchase">
+    <div class="row">
+        <div class="col-12">
+            <div class="purchase-container">
+                <div class="btn_div">
+                    <p class="disconnect_button balance">
+                        <span>YOUR ABUNDANCE TOKEN<br> BALANCE IS TOO LOW</span>
+                    </p>
+                </div>
+                <div class="btn_div">
+                    <p class="disconnect_button"><span>TRANSACTION FAILED</span></p>
+                </div>
+                <div class="btn_div">
+                    <p class="mint_button"><span>MINT SUCCESSFUL</span></p>
+                </div>
+                <div class="mb-4">
+                    <p class="affiliate">Your affiliate link is:<br>
+                        <a href="">https://username.abundancepower.org</a>
+                    </p>
+                    <h1 class="purchase-heading">BUY PROPERTY SHARES</h1>
+                </div>
+                <div class="d-flex justify-content-around round_flow">
+                    <div class="shape_div">
+                        <div class="show-chart">
+                            <div class="show-progress">
+                                <p class="show_label">0</p>
+                            </div>
+                            <p class="show-title">Your Balance</p>
+                        </div>
+                    </div>
+
+                    <div class="shape_div">
+                        <div class="show-chart">
+                            <div class="show-progress">
+                                <p class="show_label"><img [src]="files.STAR" /> 1</p>
+                                <p>1000 needed</p>
+                            </div>
+                            <p class="show-title">Abundance Balance</p>
+                        </div>
+                    </div>
+
+                    <div class="shape_div">
+                        <div class="show-chart">
+                            <div class="show-progress">
+                                <p class="show_label">
+                                    <img [src]="files.EYE" class="eye-img" />1
+                                </p>
+                                <p>0 needed</p>
+                            </div>
+                            <p class="show-title">UTOPIA Balance</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="d-flex justify-content-evenly mt-5">
+                    <a class="star" [routerLink]="[routesName.PROPERTY_SHARES]">
+                        <img [src]="files.STAR">
+                    </a>
+                    <a class="eye" [routerLink]="[routesName.BUY_SHARES]">
+                        <img [src]="files.EYE" />
+                    </a>
+                </div>
+
+                <h5 class="shares-mint text-start">
+                    <b>UTOPIA AVAILABLE TO BE MINTED 1000</b>
+                </h5>
+
+                <div class="mb-4 buy-container">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <div class="amount-input">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="number" class="form-control amount" placeholder="Amount"
+                                [(ngModel)]="amount" />
+                            <div class="input-group-prepend next">
+                                <span class="input-group-text">MAX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="burns">
+                            <h4 class="text-start">This transaction Burns :</h4>
+                            <h3 class="d-flex">
+                                <img [src]="files.STAR" width="40" />
+                                <span>1000 ABUNDANCE TOKENS</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="burns">
+                            <h4 class="text-start">This transaction Mints :</h4>
+                            <h3 class="d-flex">
+                                <img [src]="files.EYE" width="40" class="eye-img" />
+                                <span>1 UTOPIA</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_div mt-3">
+                    <button class="btn btn-success" [routerLink]="[routesName.PROPERTY_SHARES]">
+                        APPROVE TRANSACTION
+                    </button>
+                </div>
+
+                <div class="d-flex justify-content-evenly align-items-center mt-5 label_title">
+                    <div class="market_block">
+                        <h3>{{priceLabel}} PRICE</h3> <span>$28,172</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>BURNED {{priceLabel}}</h3> <span>18,450</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>MARKET CAP</h3> <span>$106,102,076</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>STAKED {{priceLabel}}</h3> <span>3,766</span>
+                    </div>
+                    <div class="market_block market">
+                        <h3>FULLY DILUPTED<br> MARKET CUP</h3> <span>$106,102,076</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>CIRCULATION {{priceLabel}}</h3> <span>3,766</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

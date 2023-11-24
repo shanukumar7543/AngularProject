@@ -1,0 +1,42 @@
+<div class="wallet_block">
+    <div class="close-icon" mat-dialog-close>
+        <i class="fa fa-times"></i>
+    </div>
+    <h4>THANK YOU FOR YOUR PAYMENT</h4>
+    <h4 class="red">DO NOT SKIP THIS STEP</h4>
+    <p>To create your membership you MUST now connect a wallet or create a wallet. Don’t worry it’s super simple and it
+        is going to open a whole world of new possibilities for you!</p>
+    <div class="row">
+        <div class="col-md-8 col-12">
+            <div class="wallet_detail">
+                <button class="get_wallet" (click)="isGetWallets = true">GET WALLET</button>
+                <h5>WHAT IS A WEB 3 WALLET & WHY DO I NEED ONE ?</h5>
+                <p>A Web 3 Wallet, Simply Put is your way to connect to a highly secure internet where you hold and
+                    control your own data.</p>
+                <p>The Secure Way To Log In instead of creating new accounts and passwords on every website, Just
+                    connect your wallet.</p>
+                <p>A Home for your Digital Assets. Wallets are used to send, receive, store, and display your digital
+                    assets like Bitcoin and NFTs.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-12 offset-md-1">
+            <div class="connect_wallet">
+                <h5>
+                    {{isGetWallets ? 'Get': 'Connect'}} Wallet
+                </h5>
+                <div class="wallet_box" (click)="connectWallet('metamask')">
+                    <figure><img src="../../../assets/images/MetaMask_Fox.svg"></figure>
+                    <p>METAMASK</p>
+                </div>
+                <div class="wallet_box" (click)="connectWallet('walletconnect')">
+                    <figure><img src="../../../assets/images/social.svg"></figure>
+                    <p>WalletConnect</p>
+                </div>
+                <div class="wallet_box" (click)="connectWallet('coinbase')">
+                    <figure><img src="../../../assets/images/coinbase.svg"></figure>
+                    <p>COINBASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="wrapper">
+    <!-- <a class="chevron-right" data-widget="pushmenu" href="#" role="button">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </a> -->
+
+    <!--  elevation-4 -->
+    <aside class="main-sidebar sidebar-dark-primary">
+        <a href="/" class="brand-link">
+            <img class="logo" [src]="files.LOGO" alt="Logo" />
+            <img class="logo_gradient" [src]="files.LOGO_GRADIENT" alt="Logo" />
+        </a>
+
+        <a class="chevron-left" data-widget="pushmenu" href="#" role="button" (click)="isCollapsMenu = !isCollapsMenu">
+            <i [class]="isCollapsMenu ? 'fa fa-chevron-right' : 'fa fa-chevron-left'" aria-hidden="true"></i>
+        </a>
+
+        <div class="sidebar">
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                    <li class="nav-item has-treeview">
+                        <a href="http://power.org/" target="_blank" [routerLinkActive]="'is-active-link'" class="d-flex align-items-center nav-link">
+                            <figure class="icon"><img [src]="files.HOME"></figure>
+                            <p><span>HOME</span></p>
+                        </a>
+                    </li>
+                    <div *ngIf="!isHome">
+                        <li class="nav-item has-treeview">
+                            <a [routerLinkActive]="'is-active-link'" [routerLink]="routes.ACTIVATE_ACCOUNT"
+                                class="d-flex align-items-center nav-link">
+                                <figure class="icon skyblue"><img [src]="files.USER_WHITE"></figure>
+                                <p><span>PROFILE</span></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" [routerLinkActive]="'is-active-link'"
+                                class="d-flex align-items-center nav-link">
+                                <figure class="icon pink"><img [src]="files.EYE"></figure>
+                                <p><span>PROPERTY SHARES</span></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" [routerLinkActive]="'is-active-link'"
+                                class="d-flex align-items-center nav-link">
+                                <figure class="icon purple"><img [src]="files.STAR"></figure>
+                                <p><span>STAKING REWARDS</span></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" [routerLinkActive]="'is-active-link'"
+                                class="d-flex align-items-center nav-link">
+                                <figure class="icon darkpurple"><img [src]="files.GIFT"></figure>
+                                <p><span>EMPOWERMENT BOOSTER</span></p>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="content-wrapper">
+        <section>
+            <div class="row right">
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </section>
+    </div>
+    <aside class="control-sidebar control-sidebar-dark"></aside>
+</div>

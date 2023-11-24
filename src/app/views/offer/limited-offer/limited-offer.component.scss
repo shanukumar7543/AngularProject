@@ -1,0 +1,284 @@
+@import '../../../../styles/variables.scss';
+
+.offer {
+    margin: 40px;
+
+    @media screen and (max-width:767px) {
+        margin: 30px 20px;
+    }
+
+    &-container {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &-heading {
+        margin: 20px 0;
+        font-size: 30px;
+    }
+}
+
+.own_amount {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 2px 0;
+    margin-bottom: 20px !important;
+}
+
+.own_amount label {
+    margin-top: 7px;
+    font-size: 18px;
+    text-align: left;
+    display: block;
+
+    @media screen and (max-width:991px) {
+        margin-right: -3px;
+        font-size: 14px;
+    }
+}
+
+a {
+    font-size: 18px;
+    font-family: 500;
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
+}
+
+.payment {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.affiliate {
+    font-size: 18px;
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
+}
+
+.btn.btn-success {
+    height: 50px;
+    background: #7ed957;
+    border-radius: 0;
+    padding: 13px 75px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width:767px) {
+        height: auto;
+    }
+
+}
+
+.btn.btn-success.account {
+    width: 100%;
+}
+
+.input-group-text {
+    border-radius: 0;
+    height: 40px;
+    background-color: $white;
+}
+
+.form-control {
+    background-color: $white;
+    padding-left: 0;
+    height: 40px;
+    padding-top: 2px;
+    border-radius: 0;
+}
+
+.image_div {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+
+.diamond_div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 30px;
+    max-width: 320px;
+    position: relative;
+    min-height: 400px;
+
+
+    .diamond_block {
+        margin: 0;
+        padding: 0;
+
+        figure {
+            margin-bottom: 0;
+
+            img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        .label {
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -15px;
+        }
+
+        .orange {
+            color: $dorange;
+        }
+
+        .red {
+            color: $dred;
+        }
+
+        .yellow {
+            color: $dyellow;
+        }
+
+        .green {
+            color: $dgreen;
+        }
+
+        .sky {
+            color: $dsky;
+        }
+
+        .purple {
+            color: $dpurple;
+        }
+
+        .pink {
+            color: $dpink;
+        }
+    }
+
+    .diamond_block.orange {
+        position: absolute;
+        left: 50%;
+        margin-left: -65px;
+    }
+
+    .diamond_block.red {
+        position: absolute;
+        left: 50%;
+        top: 55px;
+        margin-left: -157px;
+    }
+
+    .diamond_block.yellow {
+        position: absolute;
+        left: 50%;
+        top: 55px;
+        margin-left: 28px;
+    }
+
+    .diamond_block.green {
+        position: absolute;
+        left: 50%;
+        top: 110px;
+        margin-left: -65px;
+    }
+
+    .diamond_block.sky {
+        position: absolute;
+        left: 50%;
+        top: 165px;
+        margin-left: -157px;
+    }
+
+    .diamond_block.purple {
+        position: absolute;
+        left: 50%;
+        top: 165px;
+        margin-left: 28px;
+    }
+
+    .diamond_block.pink {
+        position: absolute;
+        left: 50%;
+        top: 220px;
+        margin-left: -65px;
+    }
+}
+
+.label_title {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block !important;
+
+    .market_block {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        background: $pink;
+        padding: 15px 8px;
+        border-radius: 15px;
+        margin: 20px;
+        min-width: 320px;
+
+        @media screen and (max-width:991px) {
+            min-width: 300px;
+
+        }
+
+        @media screen and (max-width:767px) {
+            margin: 20px 0;
+            display: block;
+
+        }
+    }
+
+    .market_block.market {
+        padding: 10px 8px 7px 8px;
+
+        h3 {
+            margin-bottom: -8px;
+        }
+    }
+
+    h3 {
+        margin-bottom: 5px;
+        font-size: 22px;
+        font-weight: 700;
+        display: block;
+    }
+
+    span {
+        font-size: 40px;
+        font-weight: 700;
+        display: block;
+    }
+
+    @media screen and (max-width:991px) {
+        .label_title {
+            display: block !important;
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        h3 {
+            font-size: 20px;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .own_amount label {
+        margin-bottom: 10px;
+    }
+}

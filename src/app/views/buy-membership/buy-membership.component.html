@@ -1,0 +1,72 @@
+<div class="membership-modal">
+    <div class="close-icon" mat-dialog-close>
+        <i class="fa fa-times"></i>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="btn_div">
+                <a class="btn_button green" [ngClass]="{'active': !isShowUSDT}" (click)="showUSDT(false)">
+                    <img [src]="files.CREDIT_CARD">
+                </a>
+                <a class="btn_button green" [ngClass]="{'active': isShowUSDT}" (click)="showUSDT(true)">
+                    <img [src]="files.WALLET">
+                </a>
+            </div>
+            <ng-container *ngIf="!isShowUSDT" [ngTemplateOutlet]="joinMship"></ng-container>
+            <ng-container *ngIf="isShowUSDT" [ngTemplateOutlet]="payUSDT"></ng-container>
+        </div>
+    </div>
+</div>
+
+<ng-template #joinMship>
+    <div>
+        <p class="card_detail">
+            You will be charged a total of ${{data.amount}} per month renewing on the {{currentDay}} of each month,
+            please enter your card details below
+        </p>
+        <app-payment [amount]="data.amount"></app-payment>
+    </div>
+</ng-template>
+
+<ng-template #payUSDT>
+    <div>
+        <p class="card_detail">Pay USDT using your wallet balance</p>
+        <p class="card_detail">Choose Network</p>
+        <a href="" class="payment_detail active">
+            <span>TRON (TRC20)</span><br>
+            <span>Fee: 1.00 USDT</span>
+        </a>
+        <a href="" class="payment_detail">
+            <span>MATIC (polygon)</span><br>
+            <span>Fee: 0.25 USDT</span>
+        </a>
+        <a href="" class="payment_detail">
+            <span>BNB Smart Chain BSC (BEP20)</span><br>
+            <span>Fee: 0.29 USDT</span>
+        </a>
+        <a href="" class="payment_detail">
+            <span>Binance Chain (BEP2)</span><br>
+            <span>Fee: 0.80 USDT </span>
+        </a>
+        <a href="" class="payment_detail">
+            <span>ETH (ERC-20)</span><br>
+            <span>Fee: 4.19 USDT </span>
+        </a>
+
+        <button class="submit_btn" type="submit">
+            PAY <img [src]="files.USDT">{{data.amount}}
+        </button>
+
+        <p class="card_detail mt-2">Scan QR code</p>
+
+        <figure class="text-center"><img [src]="files.QRCODE"></figure>
+
+        <h6 class="affiliate">Your affiliate link is:
+            <a href="#">
+                https://username.abundancepower.org
+            </a>
+        </h6>
+
+        <p class="card_detail">Waiting for payment to be recieved</p>
+    </div>
+</ng-template>

@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.main-sidebar {
+    border-bottom: none;
+    background-color: var(--bkg-color);
+    border-right: 1px solid #45459f;
+    position: fixed !important;
+    overflow-x: hidden;
+    z-index: 1;
+
+    .brand-link {
+        border-bottom: none;
+        text-align: center;
+    }
+
+    .sidebar {
+        a {
+            color: var(--text-color);
+            margin-bottom: 0 !important;
+            padding: 8px 16px;
+        }
+    }
+}
+
+.chevron-left,
+.chevron-right {
+    position: absolute;
+    right: 6px;
+    top: 18%;
+    font-size: 20px;
+    z-index: 1;
+}
+
+// .chevron-right {
+//     position: fixed;
+//     top: 50%;
+//     font-size: 20px;
+//     z-index: 1;
+// }
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: $lightpurple_1;
+    border-radius: 0 20px 20px 0;
+    text-align: center;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    left: -8px;
+
+    img {
+        margin: auto;
+        max-width: 28px;
+    }
+}
+
+.icon.skyblue {
+    background-color: $skyblue;
+}
+
+.icon.pink {
+    background-color: $pink;
+}
+
+.icon.purple {
+    background-color: $bg2purple;
+}
+
+.icon.darkpurple {
+    background-color: $darkpurple;
+}
+
+.row.right {
+    margin-right: 0 !important;
+}
+
+.nav-item p {
+    margin-left: 40px;
+    font-weight: 700;
+    min-height: 50px;
+    display: flex;
+    background: linear-gradient(95.21deg, #38B6FF 3.74%, #F467EC 54.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+
+    span {
+        margin: auto 0;
+    }
+}
+
+[class*="sidebar-dark-"] .nav-sidebar>.nav-item:hover>.nav-link {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.content-wrapper {
+    background-color: unset !important;
+}

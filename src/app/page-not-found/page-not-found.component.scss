@@ -1,0 +1,119 @@
+@import '../../styles/variables.scss';
+
+.main-notfound {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/404.jpg");
+    background-size: cover;
+
+    .notfound {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        line-height: 1.4;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 600px;
+            background-color: $color404;
+            -webkit-box-shadow: 0px 0px 0px 30px $color404 inset;
+            box-shadow: 0px 0px 0px 30px $color404 inset;
+            z-index: -1;
+        }
+
+        .notfound-404 {
+            position: relative;
+            height: 200px;
+
+            h1 {
+                font-family: "Passion One", cursive;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-size: 220px;
+                margin: 0px;
+                color: $black;
+                text-transform: uppercase;
+            }
+        }
+
+        h2 {
+            font-family: "Muli", sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $black;
+            margin-top: 26px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-family: "Muli", sans-serif;
+            display: inline-block;
+            font-weight: 400;
+            text-decoration: none;
+            background-color: transparent;
+            color: $black;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .notfound-search {
+            position: relative;
+            padding-right: 120px;
+            max-width: 420px;
+            width: 100%;
+            margin: 30px auto 20px;
+
+            input {
+                font-family: "Muli", sans-serif;
+                width: 100%;
+                height: 40px;
+                padding: 3px 15px;
+                color: $white;
+                font-weight: 400;
+                font-size: 18px;
+                background: $black;
+                border: none;
+            }
+
+            .button {
+                font-family: "Muli", sans-serif;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 120px;
+                height: 40px;
+                border: none;
+                background: $success;
+                cursor: pointer;
+                padding: 0;
+                color: $white;
+                font-weight: 400;
+                font-size: 16px;
+                text-transform: uppercase;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

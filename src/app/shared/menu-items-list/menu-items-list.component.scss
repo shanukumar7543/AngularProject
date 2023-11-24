@@ -1,0 +1,42 @@
+@import '../../../styles/variables.scss';
+
+.menu-icons {
+    position: absolute;
+    left: 0;
+    top: 40px;
+
+    // @media screen and (max-width:767px) {
+    //     top: 375px;
+    // }
+
+    p {
+        background: $purple;
+        padding: 7px 12px;
+        font-size: 30px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: $white;
+        cursor: pointer;
+        margin-bottom: 5px;
+
+        @media screen and (max-width:767px) {
+            padding: 3px 12px;
+        }
+
+        img{
+            margin-top: -5px;
+        }
+    }
+    .home{
+        background: $bg1purple;
+    }
+    .star{
+        background: $bg2purple;
+    }
+    .eye{
+        background: $pink;
+    }
+    .gift{
+        background: $darkpurple;
+    }
+}

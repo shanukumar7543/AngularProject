@@ -1,0 +1,19 @@
+<mat-dialog-content class="mat-typography">
+  <div>
+    <p><i [class]="data.icon"></i></p>
+    <p>{{data.title}}</p>
+    <p>
+      <a *ngIf="data?.link" [href]="data.link" target="_blank" mat-dialog-close>Click Here</a>
+      {{data.message}}
+    </p>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions *ngIf="data?.cancelBtnLabel || data?.okBtnLabel">
+  <button type="button" *ngIf="data?.cancelBtnLabel" class="btn btn-default" mat-dialog-close>
+    {{data.cancelBtnLabel}}
+  </button>
+  <button *ngIf="data?.okBtnLabel" type="submit" class="btn btn-primary" (click)="onSubmitClick()">
+    {{data.okBtnLabel}}
+  </button>
+</mat-dialog-actions>

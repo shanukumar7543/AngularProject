@@ -1,0 +1,11 @@
+<div class="menu-icons">
+    <div>
+        <p [routerLink]="[routesName.HOME]" class="home"><img [src]="files.HOME" /></p>
+    </div>
+
+    <div *ngIf="!isShowOtherMenu">
+        <p (click)="changeTheme()" class="eye"><img [src]="eyeIcon" /></p>
+        <p [routerLink]="[routesName.PROPERTY_SHARES]" class="star"><img [src]="files.STAR" /></p>
+        <p [routerLink]="[routesName.OFFER]" class="gift"><img [src]="files.GIFT" /></p>
+    </div>
+</div>

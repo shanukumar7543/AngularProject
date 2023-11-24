@@ -1,0 +1,710 @@
+@import '../../../styles/variables.scss';
+
+.account_form {
+    width: 100%;
+}
+
+.theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+p {
+    font-size: 20px;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+
+    @media screen and (max-width:767px) {
+        font-size: 15px;
+    }
+}
+
+.gif.account_image {
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+
+.activate_account {
+    padding: 40px 100px;
+
+    @media screen and (max-width:767px) {
+        padding: 10px 15px;
+    }
+}
+
+.alert-text {
+    background: $red;
+    display: block;
+    align-items: center;
+    padding: 5px 10px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    color: $white;
+    -webkit-text-fill-color: $white;
+
+}
+
+.disconnect_button {
+    height: 50px;
+    border-radius: 8px;
+    background: $danger;
+    text-align: center;
+    padding: 11px 25px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: $white !important;
+    cursor: pointer;
+
+    &:hover {
+        background: $danger;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+.global {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+    text-align: center;
+
+    @media screen and (max-width:991px) {
+        font-size: 23px;
+        margin-top: 30px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 40px;
+
+        @media screen and (max-width:991px) {
+            font-size: 35px;
+        }
+
+        @media screen and (max-width:767px) {
+            font-size: 30px;
+        }
+    }
+}
+
+.profile_user {
+    position: relative;
+    margin-bottom: 40px;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -text-fill-color: transparent;
+        margin-bottom: 35px;
+    }
+}
+
+
+
+.member_profile {
+    background: $success;
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $white;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    border: none;
+
+    @media screen and (max-width:1199px) {
+        font-size: 17px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.global.member {
+    font-size: 26px;
+    text-align: left;
+
+    @media screen and (max-width:991px) {
+        font-size: 23px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 20px;
+    }
+}
+
+.global.active {
+    margin-top: -40px;
+    text-align: left;
+    font-size: 30px;
+    width: 60%;
+
+    @media screen and (max-width:1140px) {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:991px) {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 21px;
+        width: 100%;
+    }
+}
+
+label {
+    display: block;
+}
+
+.gif {
+    width: 95%;
+}
+
+.first_block {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    --webkit-mask-composite: xor;
+    border-image: linear-gradient(-90deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+    border-radius: 8px;
+}
+
+.second_block {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    --webkit-mask-composite: xor;
+    border-image: linear-gradient(-90deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+    border-radius: 8px;
+}
+
+.third_block {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    --webkit-mask-composite: xor;
+    border-image: linear-gradient(-90deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+    border-radius: 8px;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    @media screen and (max-width:767px) {
+        padding: 0;
+    }
+
+    .stake-people {
+        margin-bottom: 20px;
+        margin-top: 30px !important;
+        font-size: 30px;
+
+        @media screen and (max-width:991px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width:767px) {
+            font-size: 23px;
+        }
+    }
+
+    .balance {
+        text-align: center;
+        border-radius: 0;
+        padding: 7px 41px;
+        background-color: $lightpurple_1;
+        border-radius: 0;
+        margin-bottom: 40px;
+        display: inline-block;
+
+        p {
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+
+    .period {
+        color: $red;
+        -webkit-text-fill-color: $red;
+        font-weight: 600;
+    }
+
+    .topup {
+        width: 100%;
+    }
+}
+
+.label.country {
+    font-size: 22px;
+    font-weight: 400 !important;
+    margin-top: 7px;
+
+    @media screen and (max-width:991px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 18px;
+    }
+}
+
+.label {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    text-align: left;
+    margin-right: 50px;
+    font-weight: 400 !important;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+
+    @media screen and (max-width:991px) {
+        width: 37%;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+}
+
+.meter_block {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    figure {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 26px;
+        font-weight: 400;
+        margin: auto 0;
+
+        @media screen and (max-width:991px) {
+            font-size: 23px;
+        }
+
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.adjust_text {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+    padding: 20px 0 20px 0;
+
+    @media screen and (max-width:991px) {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
+}
+
+.balance_label {
+    float: left;
+    font-size: 20px;
+    font-weight: 500 !important;
+    margin-right: 15px;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+    width: 50%;
+
+    @media screen and (max-width:991px) {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.wallet_place {
+    border-radius: 0;
+}
+
+.form-select.payment {
+    background: transparent;
+    border-width: 2px;
+    border-radius: 0;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.more_link {
+    text-align: left;
+    float: left;
+    text-decoration: none;
+    color: #38B6FF;
+}
+
+.payment_label {
+    text-align: left !important;
+    display: block;
+    font-size: 20px;
+    font-weight: 500 !important;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+}
+
+.payment_label.payment {
+    margin-top: -60px !important;
+    margin-bottom: 40px !important;
+
+    @media screen and (max-width:767px) {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+.every {
+    font-size: 20px;
+    font-weight: 500 !important;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+}
+
+.payment_frequency {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background: $success;
+    color: $white;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+
+    @media screen and (max-width:991px) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 15px;
+    }
+}
+
+.payment_frequency.active,
+.payment_frequency:active {
+    background: $skyblue;
+}
+
+.payment_label.future {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.block {
+    background: $white;
+    display: block;
+    height: 50px;
+    width: 60%;
+    float: left;
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-select.payment:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "\f063";
+    display: block;
+    color: #fff;
+}
+
+.form-select.payment option {
+    color: #000;
+}
+
+.form-label.range {
+    margin: 0 10px;
+    color: $danger;
+    font-size: 25px;
+    font-weight: 500 !important;
+    margin-top: -5px;
+
+    @media screen and (max-width:991px) {
+        font-size: 23px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 20px;
+    }
+
+    img {
+        margin-top: -11px;
+    }
+}
+
+.form-label.range.custom {
+    margin-top: -10px;
+
+    @media screen and (max-width:991px) {
+        margin-top: -5px;
+    }
+
+    @media screen and (max-width:767px) {
+        margin-top: 0;
+    }
+}
+
+.title_label {
+    margin-bottom: 20px;
+}
+
+.date {
+    margin-bottom: 0;
+    float: left;
+    text-align: left;
+
+    img {
+        max-width: 85%;
+    }
+}
+
+.day_select {
+    background: transparent;
+    border: 2px solid;
+    border-radius: 0;
+    color: $white;
+    position: relative;
+}
+
+.day_select:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    display: block;
+}
+
+.input-group-prepend .input-group-text {
+    background: transparent;
+    border-right: none;
+    border-radius: 0;
+    border-width: 2px;
+    color: $red;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control.wallet_input {
+    display: block;
+    height: 50px;
+    float: left;
+    border-width: 4px;
+    border-style: solid;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    --webkit-mask-composite: xor;
+    border-image: linear-gradient(178.34deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+    background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+}
+
+.input-group.account_balance {
+    width: auto;
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+}
+
+.form-control.amount {
+    background: transparent;
+    border-left: none;
+    border-width: 2px;
+    color: $red;
+    border-radius: 0;
+    padding-left: 0;
+    float: left;
+    display: inline-block;
+    border-color: $lightpurple_1;
+    font-weight: 700;
+    height: 60px;
+    color: var(--text-color);
+    border-width: 4px;
+    border-style: solid;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    --webkit-mask-composite: xor;
+    border-image: linear-gradient(178.34deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+    border-left: none;
+    color: $red;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    @media screen and (max-width:767px) {
+        width: 100px;
+    }
+}
+
+.form-control::placeholder {
+    font-weight: 700;
+    color: $red;
+}
+
+.input-group-prepend {
+    .input-group-text {
+        border-width: 4px;
+        border-style: solid;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        --webkit-mask-composite: xor;
+        border-image: linear-gradient(178.34deg, #8501A8 -27.26%, #38B6FF 98.59%)1;
+        border-radius: 8px 0 0 8px;
+        font-weight: 700;
+        height: 60px;
+        color: $red;
+    }
+}
+
+.input-group-prepend.prev {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+
+    .input-group-text {
+        border-right: none;
+    }
+}
+
+
+.form-control.amount::placeholder {
+    color: $red;
+}
+
+.button_block {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+
+
+}
+
+.btn_div button {
+    height: auto;
+    background: $success;
+    border-radius: 0;
+    padding: 13px 40px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+
+    @media screen and (max-width:991px) {
+        font-size: 25px;
+    }
+
+    @media screen and (max-width:767px) {
+        padding: 13px 20px;
+        font-size: 20px;
+    }
+}
+
+.btn_div .btn:hover {
+    background: $green;
+    border-color: $green;
+}
+
+.range-form {
+    width: 100%;
+}

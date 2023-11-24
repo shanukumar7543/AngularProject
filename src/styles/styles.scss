@@ -1,0 +1,152 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: black;
+    // --bkg-color: url(../assets/images/body_bg.png);
+    // --btn-txt-color: rgb(46, 43, 43);
+    // --btn-bg-color: rgb(20, 211, 195);
+}
+
+body.light-theme {
+    --text-color: #222;
+    --bkg-color: white;
+    // --btn-txt-color: $white;
+    // --btn-bg-color: rgb(11, 88, 160);
+}
+
+body {
+    background: var(--bkg-color);
+    color: var(--text-color);
+    // background: var(--bkg-color) no-repeat center center;
+    // background-size: cover;
+    // min-height: 100vh;
+}
+
+button {
+    color: var(--text-color) !important;
+}
+
+.btn-default {
+    color: $black !important;
+}
+
+.eye-img {
+    margin-left: 30px;
+}
+
+.user {
+    margin-left: 30px;
+}
+
+.logo_gradient {
+    display: none;
+}
+
+.light-theme .logo_gradient {
+    display: inline-block;
+}
+
+.light-theme .logo {
+    display: none;
+}
+
+.sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused,
+.sidebar-mini.sidebar-collapse .main-sidebar:hover,
+.sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
+    width: 4.6rem !important;
+    margin-left: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    --moz-appearance: textfield;
+}
+
+.home-container {
+    padding: 0 15px;
+}
+
+.wallet-container {
+    padding: 0 15px;
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    border-radius: 8px !important;
+
+    ::-webkit-scrollbar {
+        width: 7px !important;
+        color: $red;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $darkpurple !important;
+        border-radius: 10px;
+    }
+
+    .mat-dialog-content {
+        margin: 0px !important;
+        padding: 22px !important;
+    }
+
+    .mat-dialog-actions {
+        border-top: 1px solid $lightgray;
+        padding: 0 22px !important;
+        justify-content: flex-end;
+        min-height: 58px !important;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
+
+.text-red {
+    color: $red;
+}
+
+.btn-success {
+    height: 40px;
+    background: $success;
+
+    &:hover {
+        background: $green !important;
+        border-color: $green !important;
+    }
+}
+
+.close-icon {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 1;
+    cursor: pointer;
+    color: $black;
+
+    .fa-times {
+        padding: 7px 8px 6px 8px;
+        border: 1px solid;
+        border-radius: 100%;
+    }
+}

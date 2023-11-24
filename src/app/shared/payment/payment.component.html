@@ -1,0 +1,16 @@
+<ngx-stripe-card-group [formGroup]="stripeTest" [elementsOptions]="elementsOptions">
+    <div class="row">
+        <div class="col-12">
+            <ngx-stripe-card-number [options]="cardOptions"></ngx-stripe-card-number>
+        </div>
+        <div class="col-6">
+            <ngx-stripe-card-expiry [options]="cardOptions"></ngx-stripe-card-expiry>
+        </div>
+        <div class="col-6">
+            <ngx-stripe-card-cvc [options]="cardOptions"></ngx-stripe-card-cvc>
+        </div>
+    </div>
+    <button class="submit_btn" type="submit" (click)="pay()">
+        PAY ${{amount}}
+    </button>
+</ngx-stripe-card-group>

@@ -1,0 +1,96 @@
+@import '../../../styles/variables.scss';
+
+.membership-modal {
+    margin: 20px;
+    position: relative;
+
+    .card_detail {
+        font-size: 20px;
+        font-weight: 400;
+        color: #747474;
+        margin-bottom: 10px;
+    }
+
+    .affiliate {
+        text-align: center;
+        color: #747474;
+
+        a {
+            color: #747474;
+        }
+    }
+
+    .btn_div {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+        text-align: center;
+
+        .btn_button {
+            padding: 5px 15px;
+            background: $success;
+            // font-size: 25px;
+            font-weight: 500;
+            color: $white;
+            border-radius: 6px;
+            margin: 0 10px;
+            min-width: 110px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+            }
+
+            img {
+                max-width: 35px;
+                margin-right: 5px;
+            }
+        }
+
+        .btn_button.active,
+        .btn_button:active {
+            background: $skyblue;
+        }
+    }
+
+    .submit_btn {
+        width: 100%;
+        padding: 7px 15px;
+        background: $success;
+        font-size: 22px;
+        font-weight: 500;
+        color: $white;
+        border-radius: 6px;
+        text-align: center;
+        border: none;
+        margin-top: 10px;
+
+        img {
+            max-width: 35px;
+        }
+    }
+
+    .payment_detail {
+        font-size: 19px;
+        font-weight: 400;
+        color: $white;
+        padding: 5px;
+        margin: 5px 0;
+        background: $success;
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+        line-height: 26px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .payment_detail:active,
+    .payment_detail.active {
+        background: $skyblue;
+    }
+}

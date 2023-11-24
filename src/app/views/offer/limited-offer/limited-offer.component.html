@@ -1,0 +1,146 @@
+<div class="offer">
+    <div class="row">
+        <div class="col-12">
+            <div class="offer-container">
+                <div class="btn_div">
+                    <button class="btn btn-success" [routerLink]="[routesName.YOUR_PURCHASE]">CONGRATULATIONS ON
+                        ACTIVATING YOUR ACCOUNT</button>
+                </div>
+
+                <div class="mb-4">
+                    <p class="affiliate">Your affiliate link is:<br><a href="">https://username.abundancepower.org</a>
+                    </p>
+                    <h1 class="offer-heading">
+                        Limited Time Opportunity Invest In Real Property & Mint Utopia Currency FREE!
+                    </h1>
+                </div>
+
+                <div class="diamond_div">
+                    <div class="diamond_block orange">
+                        <figure>
+                            <img [src]="files.DIAMOND_ORANGE" />
+                        </figure>
+                        <div class="label orange">$300</div>
+                    </div>
+
+                    <div class="diamond_block red">
+                        <figure>
+                            <img [src]="files.DIAMOND_RED" />
+                        </figure>
+                        <div class="label red">$300</div>
+                    </div>
+
+                    <div class="diamond_block yellow">
+                        <figure>
+                            <img [src]="files.DIAMOND_YELLOW" />
+                        </figure>
+                        <div class="label yellow">$300</div>
+                    </div>
+
+                    <div class="diamond_block green">
+                        <figure>
+                            <img [src]="files.DIAMOND_GREEN" />
+                        </figure>
+                        <div class="label green">$300</div>
+                    </div>
+
+                    <div class="diamond_block sky">
+                        <figure>
+                            <img [src]="files.DIAMOND_SKY" />
+                        </figure>
+                        <div class="label sky">$300</div>
+                    </div>
+
+                    <div class="diamond_block purple">
+                        <figure>
+                            <img [src]="files.DIAMOND_PURPLE" />
+                        </figure>
+                        <div class="label">$300</div>
+                    </div>
+
+                    <div class="diamond_block pink">
+                        <figure>
+                            <img [src]="files.DIAMOND_PINK" >
+                        </figure>
+                        <div class="label pink">$300</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="own_amount">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <label>Enter own amount <span class="text-red"> *</span></label>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Enter amount" [min]="37"
+                                            [(ngModel)]="amounts" name="amounts" #amount="ngModel" required />
+                                    </div>
+                                    <div *ngIf="amount.invalid && amount.errors && (amount.dirty || amount.touched)"
+                                        class="text-red d-flex">
+                                        <span *ngIf="amount.hasError('required')">
+                                            This field is required
+                                        </span>
+                                        <span *ngIf="amount.hasError('min')">
+                                            The amount should be grater than or equal to $37
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="btn_div text-end">
+                            <button class="btn btn-success account" [routerLink]="[routesName.YOUR_PURCHASE]">TOP UP
+                                ACCOUNT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-start">YOU HOLD YOUR TOKENS 100% SECURELY IN YOUR OWN SMART CONTRACT WALLET THAT YOU
+                    HOLD THE PRIVATE KEY TO</p>
+
+                <h3 class="text-start payment">PAYMENT BREAKDOWN</h3>
+
+                <p class="text-start">$6000 TO YOUR BALANCE</p>
+                <p class="text-start">$4500 LOAN TO YOUR TEAM</p>
+                <p class="text-start">$3000 ABUNDANCE TOKENS MINTED</p>
+                <p class="text-start">$1500 TO FUNDING PROJECTS</p>
+
+                <h3 class="text-start payment">REWARDS BREAKDOWN</h3>
+
+                <p class="text-start">Math needs to be worked out along with tokenomics</p>
+
+                <div class="d-flex justify-content-evenly align-items-center mt-5 label_title">
+                    <div class="market_block">
+                        <h3>{{priceLabel}} PRICE</h3> <span>$28,172</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>BURNED {{priceLabel}}</h3> <span>18,450</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>MARKET CAP</h3> <span>$106,102,076</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>STAKED {{priceLabel}}</h3> <span>3,766</span>
+                    </div>
+                    <div class="market_block market">
+                        <h3>FULLY DILUPTED<br> MARKET CUP</h3> <span>$106,102,076</span>
+                    </div>
+                    <div class="market_block">
+                        <h3>CIRCULATION {{priceLabel}}</h3> <span>3,766</span>
+                    </div>
+                </div>
+
+                <a href="#">
+                    Not now take me to my dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+mat-dialog-content {
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    i {
+        font-size: 100px;
+    }
+
+    .fa-exclamation-circle {
+        color: $warning;
+    }
+
+    .fa-check-square {
+        color: $success;
+    }
+
+    p {
+        letter-spacing: 1.2px;
+    }
+}
+
+.mat-mdc-dialog-actions {
+    justify-content: flex-end;
+}
+
+.btn-default {
+    border: 1px solid $lightgray;
+    min-width: 70px;
+}
+
+.btn-primary {
+    min-width: 70px;
+    margin-left: 10px;
+}

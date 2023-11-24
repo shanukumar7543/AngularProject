@@ -1,0 +1,150 @@
+@import '../../../../styles/variables.scss';
+
+.purchase {
+    margin: 40px;
+
+    &-container {
+        text-align: center;
+        margin: 0 auto;
+
+        .show-chart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 5px;            
+
+            .show-progress {
+                border: 40px solid $bg1purple;
+                border-radius: 50%;
+                width: 220px;
+                height: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .show-title {
+                font-size: 26px;
+                margin-top: 8px;
+
+                @media screen and (max-width:991px) {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    .option_image{
+        min-width: 90px;
+    }
+
+    hr{
+        border: 1px solid;
+        opacity: 1;
+        margin-bottom: 30px;
+    }
+
+    &-heading {
+        margin: 34px 0 50px 0;        
+        font-size: 30px;
+        
+        @media screen and (max-width:767px) {
+            font-size: 22px;
+        }
+    }
+
+    .show_label{
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .multi-options {
+        text-align: start;
+        padding: 20px 10px;
+        padding-right: 25px;
+        margin-right: -10px;
+        border-right: 2px solid;
+
+        @media screen and (max-width:767px) {
+            border-right:none;
+            border-bottom: 2px solid;
+            margin-right: 0;
+        }
+
+        .fa-bolt {
+            color: $yellow;
+        }
+
+        .fa-home {
+            font-size: 80px;
+            color: $lightpurple;
+        }
+
+        .shares-mint {
+            margin-bottom: 0;
+            line-height: 1.6;
+            margin-left: 20px;
+            font-size: 22px;
+
+            @media screen and (max-width:991px) {
+                font-size: 19px;
+            }
+        }
+    }
+    .multi-options.last{
+        border-right: none;
+
+        @media screen and (max-width:767px) {            
+            border-bottom: none;            
+        }
+    }
+}
+
+.shape_div{
+    width: 100%;
+}
+
+.image_div{
+    display: flex;
+}
+
+.wallet_img{ 
+    height:700px;
+    margin: 0 auto;
+}
+
+.round_flow{
+    width: 100%;
+}
+
+.btn_div button {
+    height: 40px;
+    background: $success;
+    border-radius: 0;
+    width: 100%;
+}
+
+.btn_div .btn:hover {
+    background: $green;
+    border-color: $green;
+}
+
+@media screen and (max-width:1400px) {
+    .wallet_img{ height:600px;}
+}
+
+@media screen and (max-width:1199px) {
+    .wallet_img{ height:auto;}
+}
+
+@media screen and (max-width:767px) {
+    .wallet_img{ height:auto;}
+    .round_flow{ display: block !important;}
+    .image_div{ display: none;}
+}

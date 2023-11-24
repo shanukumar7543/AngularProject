@@ -1,0 +1,138 @@
+<div class="wallet-container">
+    <div class="theme-icon">
+        <button *ngIf="metamaskAddress" class="btn disconnect_button" (click)="disconnectWallet()">
+            DISCONNECT WALLET
+        </button>
+        <img [src]="files.USER" width="25" class="user" />
+        <img [src]="files.CLOSE_EYE" (click)="changeTheme()" width="25" class="eye-img" />
+    </div>
+
+    <div class="wallet-content">
+        <h1 class="stake-people">STAKE IN PEOPLE NOT JUST CRYPTO</h1>
+
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <button class="btn connect_button membership" (click)="joinMembership(true)">
+                    {{metamaskAddress ? 'UPGRADE MEMBERSHIP' : 'JOIN OUR MEMBERSHIP'}}
+                </button>
+            </div>
+            <div class="col-md-6 col-12">
+                <button class="btn connect_button" (click)="showWalletDetials()">
+                    {{metamaskAddress ? 'UPGRADE WALLET' : 'CONNECT WALLET'}}
+                </button>
+            </div>
+        </div>
+
+        <ng-container *ngIf="isWalletConnected" [ngTemplateOutlet]="walletInfo"></ng-container>
+        <ng-container *ngIf="isShowMembershipPlan" [ngTemplateOutlet]="membershipInfo"></ng-container>
+    </div>
+</div>
+
+<ng-template #walletInfo>
+    <div class="buy-container">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="amount-input">
+                    <div class="input-group">
+                        <div class="input-group-prepend prev">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control amount"
+                            [placeholder]="isShowAmountText ? 'Amount' : ''" [(ngModel)]="amount"
+                            (focus)="isShowAmountText = false" (blur)="isShowAmountText = true" />
+                        <div class="input-group-prepend next">
+                            <span class="input-group-text">MAX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <button class="btn buy_button" (click)="buy()">BUY</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="global">GLOBAL PRICE</h2>
+    <app-market-price></app-market-price>
+
+    <h2 class="global">PERSONAL BALANCES</h2>
+
+    <div class="label_title">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="market_block">
+                    <h3>WRAPPED & BALANCE</h3> <span>$0</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="market_block">
+                    <h3>ABUNDANCE BALANCE</h3> <span>0</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="market_block">
+                    <h3>UTOPIA BALANCE</h3> <span>0</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="market_block market">
+                    <h3>STAKED ABUNDANCE BALANCE</h3> <span>0</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="market_block market">
+                    <h3>STAKED UTOPIA BALANCE</h3> <span>0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #membershipInfo>
+    <h2 class="global">MEMBERSHIP OPTIONS</h2>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-xl-4">
+            <div class="plan-one">
+                <h3>$37 /month</h3>
+                <h6>INDIVIDUAL MEMBERSHIP</h6>
+                <div class="plan-details">
+                    <li>Benefit 1</li>
+                    <li>Earn from x 3 recruits</li>
+                    <li>Benefit 3</li>
+                    <li>Benefit 4</li>
+                </div>
+                <button class="buy-membership" (click)="buyMembership(37)">BUY MEMBERSHIP</button>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4">
+            <div>
+                <div class="plan-one plan-two">
+                    <h3>$74/Month</h3>
+                    <h6>INVESTORS MEMBERSHIP</h6>
+                    <div class="plan-details">
+                        <li>Benefit 1</li>
+                        <li>Earn from x 6 recruits</li>
+                        <li>Benefit 3</li>
+                        <li>Benefit 4</li>
+                    </div>
+                    <button class="buy-membership" (click)="buyMembership(74)">BUY MEMBERSHIP</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4">
+            <div>
+                <div class="plan-one plan-three">
+                    <h3>$148/Month</h3>
+                    <h6>TEAM MEMBERSHIP</h6>
+                    <div class="plan-details">
+                        <li>Benefit 1</li>
+                        <li>Earn from x 12 recruits</li>
+                        <li>Benefit 3</li>
+                        <li>Benefit 4</li>
+                    </div>
+                    <button class="buy-membership" (click)="buyMembership(148)">BUY MEMBERSHIP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
